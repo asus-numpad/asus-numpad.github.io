@@ -313,7 +313,8 @@ services.asus-numpad.enable = true;</code></pre>
       <p class="notice reveal" data-i18n="inst.notice">
         Coming from <code>RunningVAN/asus-numpad</code>? The package name is the same but the source
         differs, so an in-place upgrade does not happen: run <code>sudo apt remove asus-numpad</code>
-        (or <code>dnf remove</code>) once before switching.
+        (or <code>dnf remove</code>) once before switching. These repositories now carry 1.0.0 and later
+        only, and 1.0.0 sorts below the old 1.2.4, so no upgrade prompt will appear.
       </p>
 
       <div class="other-ways reveal">
@@ -399,6 +400,10 @@ asus-numpad --lang en check</code></pre>
         <details class="reveal">
           <summary data-i18n="faq.6.q">Do I need root, or a reboot?</summary>
           <p data-i18n="faq.6.d">Neither. The daemon runs as a <code>systemd --user</code> unit; udev grants the touchpad and backlight nodes to the session. Log out and in once after the first install so the unit and the udev rule are picked up.</p>
+        </details>
+        <details class="reveal">
+          <summary data-i18n="faq.7.q">Does Wayland or X11 make a difference?</summary>
+          <p data-i18n="faq.7.d">No. The daemon only talks to evdev and uinput, so it behaves the same under Wayland, X11 and a bare TTY. What matters is the session: without access to <code>/dev/uinput</code> there is nowhere for the keys to go.</p>
         </details>
       </div>
     </div>

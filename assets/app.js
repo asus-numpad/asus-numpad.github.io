@@ -68,7 +68,7 @@
     "inst.pacman.n": "Arch、Manjaro、EndeavourOS —— AUR 源码包名为 <code>asus-numpad-rs</code>",
     "inst.apk.n": "Alpine 3.19+（musl 构建）",
     "inst.nix.n": "Flake，无需添加源",
-    "inst.notice": "从旧仓库 <code>RunningVAN/asus-numpad</code> 过来的用户：包名相同但来源不同，无法就地升级，换源前先执行一次 <code>sudo apt remove asus-numpad</code>（rpm 用 <code>dnf remove</code>）。",
+    "inst.notice": "从旧仓库 <code>RunningVAN/asus-numpad</code> 过来的用户：包名相同但来源不同，无法就地升级，换源前先执行一次 <code>sudo apt remove asus-numpad</code>（rpm 用 <code>dnf remove</code>）。这里的源只发布 1.0.0 起，版本号低于旧的 1.2.4，包管理器不会提示升级。",
     "inst.other1.t": "Gentoo 与静态 tarball",
     "inst.other1.d": "Releases 里有适合 ebuild 的静态 tarball，也有 deb、rpm、pkg.tar.zst、apk 供离线安装。",
     "inst.other1.a": "前往 Releases",
@@ -96,6 +96,8 @@
 
     "faq.6.q": "需要 root 或重启吗？",
     "faq.6.d": "都不需要。守护进程以 <code>systemd --user</code> 单元运行，udev 把触摸板与背光节点授权给会话。首次安装后注销再登录一次，让单元与 udev 规则生效。",
+    "faq.7.q": "Wayland 还是 X11，有区别吗？",
+    "faq.7.d": "没有。守护进程只与 evdev、uinput 打交道，在 Wayland、X11 和纯 TTY 下表现一致。真正相关的是会话权限：拿不到 <code>/dev/uinput</code> 时按键无处可去。",
 
     "foot.note": "ASUS 触摸板数字小键盘（NumberPad）的 Linux 用户态驱动。GPL-3.0-or-later。",
     "foot.project": "项目",
@@ -169,7 +171,7 @@
     "inst.pacman.n": "Arch、Manjaro、EndeavourOS —— AUR 來源套件名為 <code>asus-numpad-rs</code>",
     "inst.apk.n": "Alpine 3.19+（musl 建置）",
     "inst.nix.n": "Flake，無需加入來源",
-    "inst.notice": "從舊倉庫 <code>RunningVAN/asus-numpad</code> 過來的使用者：套件名稱相同但來源不同，無法就地升級，換來源前先執行一次 <code>sudo apt remove asus-numpad</code>（rpm 用 <code>dnf remove</code>）。",
+    "inst.notice": "從舊倉庫 <code>RunningVAN/asus-numpad</code> 過來的使用者：套件名稱相同但來源不同，無法就地升級，換來源前先執行一次 <code>sudo apt remove asus-numpad</code>（rpm 用 <code>dnf remove</code>）。這裡的源只發佈 1.0.0 起，版本號低於舊的 1.2.4，套件管理器不會提示升級。",
     "inst.other1.t": "Gentoo 與靜態 tarball",
     "inst.other1.d": "Releases 裡有適合 ebuild 的靜態 tarball，也有 deb、rpm、pkg.tar.zst、apk 供離線安裝。",
     "inst.other1.a": "前往 Releases",
@@ -196,6 +198,8 @@
     "faq.5.d": "支援，但有差異：這類機器的觸控板是鍵盤右側的豎條，數字模式由鍵盤專用鍵切換，而不是右上角的 62 幀長按。可用 <code>numlock</code> 固定模式。",
     "faq.6.q": "需要 root 或重新開機嗎？",
     "faq.6.d": "都不需要。守護行程以 <code>systemd --user</code> 單元執行，udev 把觸控板與背光節點授權給工作階段。首次安裝後登出再登入一次，讓單元與 udev 規則生效。",
+    "faq.7.q": "Wayland 還是 X11，有差別嗎？",
+    "faq.7.d": "沒有。守護行程只與 evdev、uinput 打交道，在 Wayland、X11 與純 TTY 下表現一致。真正相關的是工作階段權限：取不到 <code>/dev/uinput</code> 時按鍵無處可去。",
 
     "foot.note": "ASUS 觸控板數字小鍵盤（NumberPad）的 Linux 使用者空間驅動程式。GPL-3.0-or-later。",
     "foot.project": "專案",
