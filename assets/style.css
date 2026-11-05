@@ -500,8 +500,33 @@ details p { margin: 0; padding: 0 0 16px; color: var(--text-2); font-size: 14px;
 .foot-src { font-family: var(--mono); font-size: 11.5px; opacity: .75; }
 
 /* reveal */
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
-.reveal.in { opacity: 1; transform: none; }
+/* Progressive enhancement: without JS the content stays visible. */
+html.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+html.js .reveal.in { opacity: 1; transform: none; }
+
+/* ---------- 官方产品图 ---------- */
+.model-shots {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 16px; margin-top: 18px;
+}
+.model-shots figure {
+  margin: 0; padding: 16px 16px 12px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface);
+}
+.model-shots img {
+  display: block; width: 100%; height: auto;
+  filter: drop-shadow(0 20px 34px rgba(0, 0, 0, .35));
+}
+.model-shots figcaption {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-top: 12px; font-size: 13px; color: var(--text-2);
+}
+.model-shots figcaption span { color: var(--text-3); }
+
+@media print {
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -520,6 +545,7 @@ details p { margin: 0; padding: 0 0 16px; color: var(--text-2); font-size: 14px;
 }
 
 @media (max-width: 720px) {
+  .model-shots { grid-template-columns: 1fr; }
   .wrap, .nav-inner { padding: 0 18px; }
   .hero { padding-top: 108px; }
   h1 { font-size: 2.1rem; }
@@ -535,3 +561,17 @@ details p { margin: 0; padding: 0 0 16px; color: var(--text-2); font-size: 14px;
   table { min-width: 640px; }
   .distro-strip { margin-top: 44px; gap: 14px; }
 }
+
+/* ---------- install notice ---------- */
+.notice {
+  margin: 20px 0 0;
+  padding: 14px 16px 14px 18px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+.notice code { color: var(--text); font-size: .95em; }

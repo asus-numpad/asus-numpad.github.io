@@ -9,6 +9,7 @@
 <meta property="og:description" content="Userspace driver for the ASUS NumberPad touchpad numpad. One package, any distro, no kernel patch.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4.5" width="19" height="15" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10h2M14 10h2M8 14.5h2M14 14.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </span>
       <span class="brand-name">asus-numpad</span>
-      <span class="brand-tag">1.2.4</span>
+      <span class="brand-tag">1.0.0</span>
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#features" data-i18n="nav.features">Features</a>
@@ -35,7 +36,7 @@
         <svg class="ic-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 4 4M20 20l-1.6-1.6M18.4 5.6 20 4M4 20l1.6-1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <svg class="ic-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
       </button>
-      <a class="btn btn-ghost btn-sm" href="https://github.com/RunningVAN/asus-numpad" target="_blank" rel="noopener">
+      <a class="btn btn-ghost btn-sm" href="https://github.com/asus-numpad/asus-numpad" target="_blank" rel="noopener">
         <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.6c.4.07.55-.17.55-.38l-.01-1.34c-2.22.48-2.69-1.07-2.69-1.07-.37-.93-.9-1.18-.9-1.18-.73-.5.06-.49.06-.49.81.06 1.24.83 1.24.83.72 1.23 1.88.87 2.34.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.19c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         GitHub
       </a>
@@ -61,7 +62,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#install" data-i18n="hero.cta1">Install</a>
-          <a class="btn btn-ghost" href="https://github.com/RunningVAN/asus-numpad/releases" target="_blank" rel="noopener" data-i18n="hero.cta2">Download packages</a>
+          <a class="btn btn-ghost" href="https://github.com/asus-numpad/asus-numpad/releases" target="_blank" rel="noopener" data-i18n="hero.cta2">Download packages</a>
         </div>
         <div class="quick-cmd" role="group" aria-label="Quick install">
           <div class="quick-tabs" role="tablist">
@@ -72,7 +73,7 @@
           <div class="quick-body">
             <pre class="qcode" data-qt-body="apt"><code>sudo apt install asus-numpad</code></pre>
             <pre class="qcode hidden" data-qt-body="dnf"><code>sudo dnf install asus-numpad</code></pre>
-            <pre class="qcode hidden" data-qt-body="nix"><code>nix run github:RunningVAN/asus-numpad</code></pre>
+            <pre class="qcode hidden" data-qt-body="nix"><code>nix run github:asus-numpad/asus-numpad</code></pre>
             <button class="copy-btn" type="button" aria-label="Copy"><span data-i18n="copy">Copy</span></button>
           </div>
           <p class="quick-note" data-i18n="hero.note">Add the repository once — see <a href="#install">Install</a> for the one-liner.</p>
@@ -189,7 +190,7 @@
     <div class="wrap">
       <header class="sec-head reveal">
         <h2 data-i18n="models.title">Supported models</h2>
-        <p data-i18n="models.sub">A model id only switches parameters by hand; matching none of them runs on <code>universal</code>.</p>
+        <p data-i18n="models.sub">This table is the support list. A model id switches parameters by hand; a machine outside it is refused at startup.</p>
       </header>
       <div class="table-wrap reveal">
         <table>
@@ -206,10 +207,28 @@
             <tr><td><code>g615</code></td><td>Strix SCAR 16 / G16 (2025–2026) — <code>G615</code>, <code>G635</code></td><td data-i18n="models.g615">2026 keeps the same codes</td></tr>
             <tr><td><code>gx550</code></td><td>Zephyrus Duo 15 / 16 — <code>GX550</code>, <code>GX551</code>, <code>GX650</code></td><td data-i18n="models.gx">Side-mounted pad; number mode is a keyboard key</td></tr>
             <tr><td><code>ux582</code></td><td>Zenbook Duo — <code>UX582</code>, <code>UX482</code></td><td data-i18n="models.ux">Side-mounted pad; number mode is a keyboard key</td></tr>
-            <tr><td><code>universal</code></td><td data-i18n="models.uni">Anything else</td><td data-i18n="models.unid">Vendor defaults, keymap picked by the touchpad module</td></tr>
           </tbody>
         </table>
       </div>
+      <div class="model-shots reveal">
+        <figure>
+          <img src="assets/models/g533.webp" alt="ROG Strix SCAR 15 / G15 (2022)" width="900" height="645" decoding="async">
+          <figcaption><code>g533</code><span>ROG Strix SCAR 15 / G15 (2022)</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/models/g614.webp" alt="ROG Strix SCAR 16 / G16 (2023)" width="900" height="690" decoding="async">
+          <figcaption><code>g614</code><span>ROG Strix SCAR 16 / G16 (2023–2024)</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/models/g615.webp" alt="ROG Strix SCAR 16 (2025)" width="900" height="716" decoding="async">
+          <figcaption><code>g615</code><span>ROG Strix SCAR 16 / G16 (2025–2026)</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/models/gx550.webp" alt="ROG Zephyrus Duo 16 (2022)" width="900" height="655" decoding="async">
+          <figcaption><code>gx550</code><span>ROG Zephyrus Duo 15 / 16</span></figcaption>
+        </figure>
+      </div>
+      <p class="fine reveal" data-i18n="models.shots">Product images from the ASUS product pages. <code>ux582</code> (Zenbook Duo) has no current product page, so it is listed without one.</p>
       <p class="fine reveal" data-i18n="models.fine">
         The DMI model code is authoritative; marketing names are for orientation only. Pin a model with
         <code>asus-numpad sku g614</code> when the hardware cannot be read reliably, and <code>asus-numpad sku auto</code> to go back.
@@ -237,7 +256,7 @@
 
         <div class="pane" data-pane="apt">
           <p class="pane-note" data-i18n="inst.apt.n">Debian 12/13, Ubuntu 22.04–24.04, Mint 21+</p>
-          <pre><code>echo "deb [trusted=yes] https://raw.githubusercontent.com/RunningVAN/asus-numpad/main/repo/apt stable main" \
+          <pre><code>echo "deb [trusted=yes] https://raw.githubusercontent.com/asus-numpad/asus-numpad/main/repo/apt stable main" \
   | sudo tee /etc/apt/sources.list.d/asus-numpad.list
 sudo apt update
 sudo apt install asus-numpad</code></pre>
@@ -248,7 +267,7 @@ sudo apt install asus-numpad</code></pre>
           <pre><code>sudo tee /etc/yum.repos.d/asus-numpad.repo >/dev/null &lt;&lt;'EOF'
 [asus-numpad]
 name=asus-numpad
-baseurl=https://raw.githubusercontent.com/RunningVAN/asus-numpad/main/repo/rpm/$basearch
+baseurl=https://raw.githubusercontent.com/asus-numpad/asus-numpad/main/repo/rpm/$basearch
 enabled=1
 gpgcheck=0
 EOF
@@ -258,7 +277,7 @@ sudo dnf install asus-numpad</code></pre>
         <div class="pane hidden" data-pane="zypper">
           <p class="pane-note" data-i18n="inst.zypper.n">openSUSE Leap 16 and Tumbleweed read the same rpm-md repo</p>
           <pre><code>sudo zypper addrepo --no-gpgcheck --refresh \
-  "https://raw.githubusercontent.com/RunningVAN/asus-numpad/main/repo/rpm/$(uname -m)" asus-numpad
+  "https://raw.githubusercontent.com/asus-numpad/asus-numpad/main/repo/rpm/$(uname -m)" asus-numpad
 sudo zypper install asus-numpad</code></pre>
         </div>
 
@@ -268,14 +287,14 @@ sudo zypper install asus-numpad</code></pre>
 
 [asus-numpad]
 SigLevel = Optional TrustAll
-Server = https://raw.githubusercontent.com/RunningVAN/asus-numpad/main/repo/arch/$arch
+Server = https://raw.githubusercontent.com/asus-numpad/asus-numpad/main/repo/arch/$arch
 EOF
 sudo pacman -Sy asus-numpad</code></pre>
         </div>
 
         <div class="pane hidden" data-pane="apk">
           <p class="pane-note" data-i18n="inst.apk.n">Alpine 3.19+ (musl build)</p>
-          <pre><code>echo "https://raw.githubusercontent.com/RunningVAN/asus-numpad/main/repo/alpine/$(apk --print-arch)" \
+          <pre><code>echo "https://raw.githubusercontent.com/asus-numpad/asus-numpad/main/repo/alpine/$(apk --print-arch)" \
   | sudo tee -a /etc/apk/repositories
 sudo apk update
 sudo apk add --allow-untrusted asus-numpad</code></pre>
@@ -283,7 +302,7 @@ sudo apk add --allow-untrusted asus-numpad</code></pre>
 
         <div class="pane hidden" data-pane="nix">
           <p class="pane-note" data-i18n="inst.nix.n">Flake, no repo needed</p>
-          <pre><code>nix run github:RunningVAN/asus-numpad
+          <pre><code>nix run github:asus-numpad/asus-numpad
 
 # NixOS
 services.asus-numpad.enable = true;</code></pre>
@@ -291,11 +310,17 @@ services.asus-numpad.enable = true;</code></pre>
         <button class="copy-btn copy-pane" type="button" aria-label="Copy"><span data-i18n="copy">Copy</span></button>
       </div>
 
+      <p class="notice reveal" data-i18n="inst.notice">
+        Coming from <code>RunningVAN/asus-numpad</code>? The package name is the same but the source
+        differs, so an in-place upgrade does not happen: run <code>sudo apt remove asus-numpad</code>
+        (or <code>dnf remove</code>) once before switching.
+      </p>
+
       <div class="other-ways reveal">
         <div>
           <h3 data-i18n="inst.other1.t">Gentoo and plain tarball</h3>
           <p data-i18n="inst.other1.d">An ebuild-friendly static tarball is on Releases; so are deb, rpm, pkg.tar.zst and apk for offline installs.</p>
-          <a class="link" href="https://github.com/RunningVAN/asus-numpad/releases" target="_blank" rel="noopener" data-i18n="inst.other1.a">Releases</a>
+          <a class="link" href="https://github.com/asus-numpad/asus-numpad/releases" target="_blank" rel="noopener" data-i18n="inst.other1.a">Releases</a>
         </div>
         <div>
           <h3 data-i18n="inst.other2.t">Then verify</h3>
@@ -361,7 +386,7 @@ asus-numpad --lang en check</code></pre>
         </details>
         <details class="reveal">
           <summary data-i18n="faq.3.q">My model is not in the table — will it work?</summary>
-          <p data-i18n="faq.3.d">Unmatched machines run on <code>universal</code> with vendor defaults and a keymap chosen by the touchpad module. If the module is unknown, the layout gate refuses it rather than guessing, and <code>asus-numpad check</code> prints what to send along.</p>
+          <p data-i18n="faq.3.d">A machine that matches no row is refused at startup: the gate exits with code 3 and prints the supported models, instead of running parameters meant for other hardware. <code>--sku</code> or <code>asus-numpad sku &lt;id&gt;</code> remains the way in, and <code>asus-numpad check</code> prints what to send along.</p>
         </details>
         <details class="reveal">
           <summary data-i18n="faq.4.q">Why are the packages not GPG signed?</summary>
@@ -370,6 +395,10 @@ asus-numpad --lang en check</code></pre>
         <details class="reveal">
           <summary data-i18n="faq.5.q">Dual-screen Zephyrus Duo and Zenbook Duo?</summary>
           <p data-i18n="faq.5.d">Supported, with a difference: the pad is a vertical strip to the right of the keyboard, so number mode is switched by a dedicated keyboard key instead of the 62-frame long press. Use <code>numlock</code> to pin the mode.</p>
+        </details>
+        <details class="reveal">
+          <summary data-i18n="faq.6.q">Do I need root, or a reboot?</summary>
+          <p data-i18n="faq.6.d">Neither. The daemon runs as a <code>systemd --user</code> unit; udev grants the touchpad and backlight nodes to the session. Log out and in once after the first install so the unit and the udev rule are picked up.</p>
         </details>
       </div>
     </div>
@@ -389,21 +418,23 @@ asus-numpad --lang en check</code></pre>
       </div>
       <div class="foot-col">
         <h4 data-i18n="foot.project">Project</h4>
-        <a href="https://github.com/RunningVAN/asus-numpad" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://github.com/RunningVAN/asus-numpad/releases" target="_blank" rel="noopener">Releases</a>
-        <a href="https://github.com/RunningVAN/asus-numpad/blob/main/docs/machines.md" target="_blank" rel="noopener" data-i18n="foot.machines">Model notes</a>
-        <a href="https://github.com/RunningVAN/asus-numpad/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/asus-numpad/asus-numpad" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/blob/main/docs/machines.md" target="_blank" rel="noopener" data-i18n="foot.machines">Model notes</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/issues" target="_blank" rel="noopener">Issues</a>
       </div>
       <div class="foot-col">
         <h4 data-i18n="foot.docs">Docs</h4>
-        <a href="https://github.com/RunningVAN/asus-numpad#readme" target="_blank" rel="noopener">README</a>
-        <a href="https://github.com/RunningVAN/asus-numpad/blob/main/docs/install.md" target="_blank" rel="noopener" data-i18n="foot.install">Install guide</a>
-        <a href="https://github.com/RunningVAN/asus-numpad/blob/main/docs/verification.md" target="_blank" rel="noopener" data-i18n="foot.verify">Verification log</a>
+        <a href="https://github.com/asus-numpad/asus-numpad#readme" target="_blank" rel="noopener">README</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/blob/main/docs/install.md" target="_blank" rel="noopener" data-i18n="foot.install">Install guide</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/blob/main/docs/verification.md" target="_blank" rel="noopener" data-i18n="foot.verify">Verification log</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/blob/main/README.zh-CN.md" target="_blank" rel="noopener" hreflang="zh-Hans">README · 简体</a>
+        <a href="https://github.com/asus-numpad/asus-numpad/blob/main/README.zh-TW.md" target="_blank" rel="noopener" hreflang="zh-Hant">README · 繁體</a>
       </div>
     </div>
     <div class="wrap foot-bottom">
-      <span data-i18n="foot.right">© 2026 RunningVAN · GPL-3.0-or-later</span>
-      <span class="foot-src">repo/index.html · 1.2.4</span>
+      <span data-i18n="foot.right">© 2026 asus-numpad · GPL-3.0-or-later</span>
+      <span class="foot-src">repo/index.html · 1.0.0</span>
     </div>
   </footer>
 
