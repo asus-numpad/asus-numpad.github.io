@@ -21,7 +21,7 @@
         <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4.5" width="19" height="15" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10h2M14 10h2M8 14.5h2M14 14.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </span>
       <span class="brand-name">asus-numpad</span>
-      <span class="brand-tag">1.0.0</span>
+      <span class="brand-tag">1.0.2</span>
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#features" data-i18n="nav.features">Features</a>
@@ -123,12 +123,12 @@
         <article class="card reveal">
           <div class="card-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3.5 8.5 12 4l8.5 4.5v7L12 20l-8.5-4.5v-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3.5 8.5 12 13l8.5-4.5M12 13v7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
           <h3 data-i18n="feat.2.t">One package, whole ecosystem</h3>
-          <p data-i18n="feat.2.d">The deb is built on glibc 2.35 and covers Ubuntu 22.04–24.04 with Debian 12/13; the rpm is built on el9 and covers RHEL 9–10, Fedora and openSUSE. CI installs the same file in every target before a release ships.</p>
+          <p data-i18n="feat.2.d">The deb is built on glibc 2.35 and covers Ubuntu 22.04–24.04 with Debian 12/13; the rpm is built on el9 and covers RHEL 9–10, Fedora and openSUSE. The release workflow installs the same file in every target before publishing.</p>
         </article>
         <article class="card reveal">
           <div class="card-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
           <h3 data-i18n="feat.3.t">Model recognised at runtime</h3>
-          <p data-i18n="feat.3.d">DMI fields and the touchpad module decide the cell centres and keymap. You cannot install the wrong build, because no build names a model. <code>asus-numpad sku</code> shows what it picked and why.</p>
+          <p data-i18n="feat.3.d">DMI fields and the touchpad module decide the cell centres and keymap. No package name carries a model, so there is no wrong build to install. <code>asus-numpad sku</code> shows what it picked and why.</p>
         </article>
         <article class="card reveal">
           <div class="card-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
@@ -143,7 +143,7 @@
         <article class="card reveal">
           <div class="card-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.3 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.3-3.6-8.5S9.6 5.8 12 3.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
           <h3 data-i18n="feat.6.t">English and two Chinese locales</h3>
-          <p data-i18n="feat.6.d">Interface, messages and man page ship in en, zh-CN and zh-TW, resolved from <code>ASUS_NUMPAD_LANG</code>, <code>--lang</code>, the config file, then the system locale.</p>
+          <p data-i18n="feat.6.d">Interface and messages ship in en, zh-CN and zh-TW; the man page is English only. The locale comes from <code>ASUS_NUMPAD_LANG</code>, <code>--lang</code>, the config file, then the system locale.</p>
         </article>
       </div>
     </div>
@@ -196,35 +196,35 @@
         <figure>
           <img src="assets/models/g533.webp" alt="ROG Strix SCAR 15 / G15 (2022)" width="900" height="645" decoding="async">
           <figcaption>
-            <code>g533</code><span>ROG Strix SCAR 15 / G15 (2022) — G533Z*, G513R*</span>
+            <code>g533</code><span data-i18n="models.m533">ROG Strix SCAR 15 / Strix G15 (2022) — G533Z, G513R</span>
             <em data-i18n="models.n533">2021 variants ship without a NumberPad and are not matched</em>
           </figcaption>
         </figure>
         <figure>
           <img src="assets/models/g614.webp" alt="ROG Strix SCAR 16 / G16 (2023)" width="900" height="690" decoding="async">
           <figcaption>
-            <code>g614</code><span>ROG Strix SCAR 16 / G16 (2023–2024) — G614, G634</span>
+            <code>g614</code><span data-i18n="models.m614">ROG Strix SCAR 16 / Strix G16 (2023–2024) — G614, G634</span>
             <em data-i18n="models.n614">Verified on G634JY</em>
           </figcaption>
         </figure>
         <figure>
           <img src="assets/models/g615.webp" alt="ROG Strix SCAR 16 (2025)" width="900" height="716" decoding="async">
           <figcaption>
-            <code>g615</code><span>ROG Strix SCAR 16 / G16 (2025–2026) — G615, G635</span>
+            <code>g615</code><span data-i18n="models.m615">ROG Strix SCAR 16 / Strix G16 (2025–2026) — G615, G635</span>
             <em data-i18n="models.n615">2026 keeps the same codes</em>
           </figcaption>
         </figure>
         <figure>
-          <img src="assets/models/gx550.webp" alt="ROG Zephyrus Duo 16 (2022)" width="900" height="655" decoding="async">
+          <img src="assets/models/gx550.webp" alt="ROG Zephyrus Duo 16 (GX650)" width="900" height="655" decoding="async">
           <figcaption>
-            <code>gx550</code><span>ROG Zephyrus Duo 15 / 16 — GX550, GX551, GX650</span>
+            <code>gx550</code><span data-i18n="models.mgx">ROG Zephyrus Duo 15 / Duo 15 SE / Duo 16 (2020–2023) — GX550, GX551, GX650</span>
             <em data-i18n="models.ngx">Side-mounted pad; number mode is a keyboard key</em>
           </figcaption>
         </figure>
         <figure>
           <img src="assets/models/ux582.webp" alt="ASUS Zenbook Duo (UX582 / UX482)" width="900" height="563" loading="lazy" decoding="async">
           <figcaption>
-            <code>ux582</code><span>ASUS Zenbook Duo (UX582 / UX482) — UX582, UX482</span>
+            <code>ux582</code><span data-i18n="models.mux">ASUS Zenbook Duo 14 / Zenbook Pro Duo 15 OLED (2020–2021) — UX582, UX482</span>
             <em data-i18n="models.nux">Side-mounted pad; number mode is a keyboard key</em>
           </figcaption>
         </figure>
@@ -392,7 +392,7 @@ asus-numpad --lang en check</code></pre>
         </details>
         <details class="reveal">
           <summary data-i18n="faq.4.q">Why are the packages not GPG signed?</summary>
-          <p data-i18n="faq.4.d">Key rotation costs more than it buys for a single-package repo, and the index carries per-file hashes. If you need signature verification today, install the package from Releases instead of the repository.</p>
+          <p data-i18n="faq.4.d">A key buys one signature check for a repository that holds a single package, and every user has to import a new key whenever it rotates. The index carries per-file hashes instead; if you need signature verification, install the package from Releases.</p>
         </details>
         <details class="reveal">
           <summary data-i18n="faq.5.q">Dual-screen Zephyrus Duo and Zenbook Duo?</summary>
@@ -440,7 +440,7 @@ asus-numpad --lang en check</code></pre>
     </div>
     <div class="wrap foot-bottom">
       <span data-i18n="foot.right">© 2026 asus-numpad · GPL-3.0-or-later</span>
-      <span class="foot-src">repo/index.html · 1.0.0</span>
+      <span class="foot-src">site/index.html · 1.0.2</span>
     </div>
   </footer>
 
