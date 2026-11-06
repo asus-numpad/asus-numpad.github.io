@@ -57,7 +57,7 @@
     "models.g615": "2026 款沿用同一代号",
     "models.gx": "侧置触摸板，数字模式由键盘专用键切换",
     "models.ux": "侧置触摸板，数字模式由键盘专用键切换",
-    "models.shots": "产品图取自华硕官网产品页。<code>ux582</code>（灵耀双屏）官网已无现行产品页，仅列表不配图。",
+    "models.shots": "产品图取自华硕官网产品页，与上表机型一一对应。",
     "models.fine": "DMI 里的机型代号为准，宣传名称仅供参考。硬件读不准时用 <code>asus-numpad sku g614</code> 手动指定，<code>asus-numpad sku auto</code> 恢复自动识别。",
 
     "inst.title": "安装",
@@ -160,7 +160,7 @@
     "models.g615": "2026 年款沿用同一代號",
     "models.gx": "側置觸控板，數字模式由鍵盤專用鍵切換",
     "models.ux": "側置觸控板，數字模式由鍵盤專用鍵切換",
-    "models.shots": "產品圖取自華碩官網產品頁。<code>ux582</code>（Zenbook Duo）官網已無現行產品頁，僅列表不配圖。",
+    "models.shots": "產品圖取自華碩官網產品頁，與上表機型一一對應。",
     "models.fine": "以 DMI 裡的機型代號為準，宣傳名稱僅供對照。硬體讀不準時用 <code>asus-numpad sku g614</code> 手動指定，<code>asus-numpad sku auto</code> 回復自動辨識。",
 
     "inst.title": "安裝",

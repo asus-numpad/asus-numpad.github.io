@@ -524,6 +524,14 @@ html.js .reveal.in { opacity: 1; transform: none; }
 }
 .model-shots figcaption span { color: var(--text-3); }
 
+/* odd count: centre the last card so the grid does not end half-empty */
+.model-shots figure:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc((100% - 16px) / 2);
+  max-width: 100%;
+  justify-self: center;
+}
+
 @media print {
   html.js .reveal { opacity: 1; transform: none; transition: none; }
 }
