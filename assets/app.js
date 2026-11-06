@@ -56,7 +56,8 @@
     "models.g614": "已在 <code>G634JY</code> 真机验证",
     "models.g615": "2026 款沿用同一代号",
     "models.gx": "侧置触摸板，数字模式由键盘专用键切换",
-    "models.shots": "产品图取自华硕官网产品页，与上表机型一一对应。",
+    "models.ux": "侧置触摸板，数字模式由键盘专用键切换",
+    "models.shots": "产品图取自华硕官网产品页。<code>ux582</code>（灵耀双屏）官网已无现行产品页，仅列表不配图。",
     "models.fine": "DMI 里的机型代号为准，宣传名称仅供参考。硬件读不准时用 <code>asus-numpad sku g614</code> 手动指定，<code>asus-numpad sku auto</code> 恢复自动识别。",
 
     "inst.title": "安装",
@@ -90,7 +91,7 @@
     "faq.3.d": "一行都不匹配的机器拒绝启动：闸门以退出码 3 结束并打印支持机型，不拿别的机型的参数硬跑。<code>--sku</code> 或 <code>asus-numpad sku &lt;id&gt;</code> 是放行通道，<code>asus-numpad check</code> 会打印需要反馈的信息。",
     "faq.4.q": "为什么不给安装包做 GPG 签名？",
     "faq.4.d": "单包仓库做密钥轮换的成本高于收益，索引里带有逐文件哈希。若一定要校验签名，请从 Releases 下载安装包而不是走软件源。",
-    "faq.5.q": "冰刃双屏这类机型呢？",
+    "faq.5.q": "冰刃双屏、灵耀双屏这类机型呢？",
     "faq.5.d": "支持，但有差异：这类机器的触摸板是键盘右侧的竖条，数字模式由键盘专用键切换，而不是右上角的 62 帧长按。可用 <code>numlock</code> 固定模式。",
 
     "faq.6.q": "需要 root 或重启吗？",
@@ -158,7 +159,8 @@
     "models.g614": "已在 <code>G634JY</code> 實機驗證",
     "models.g615": "2026 年款沿用同一代號",
     "models.gx": "側置觸控板，數字模式由鍵盤專用鍵切換",
-    "models.shots": "產品圖取自華碩官網產品頁，與上表機型一一對應。",
+    "models.ux": "側置觸控板，數字模式由鍵盤專用鍵切換",
+    "models.shots": "產品圖取自華碩官網產品頁。<code>ux582</code>（Zenbook Duo）官網已無現行產品頁，僅列表不配圖。",
     "models.fine": "以 DMI 裡的機型代號為準，宣傳名稱僅供對照。硬體讀不準時用 <code>asus-numpad sku g614</code> 手動指定，<code>asus-numpad sku auto</code> 回復自動辨識。",
 
     "inst.title": "安裝",
@@ -192,7 +194,7 @@
     "faq.3.d": "一行都不匹配的機器拒絕啟動：閘門以結束碼 3 中止並列出支援機型，不拿別的機型的參數硬跑。<code>--sku</code> 或 <code>asus-numpad sku &lt;id&gt;</code> 是放行通道，<code>asus-numpad check</code> 會列出需要回報的資訊。",
     "faq.4.q": "為什麼不給安裝套件做 GPG 簽章？",
     "faq.4.d": "單一套件倉庫做金鑰輪替的成本高於收益，索引裡帶有逐檔雜湊。若一定要驗簽，請從 Releases 下載套件而不是走軟體來源。",
-    "faq.5.q": "雙螢幕機型（Zephyrus Duo）呢？",
+    "faq.5.q": "雙螢幕機型（Zephyrus Duo、Zenbook Duo）呢？",
     "faq.5.d": "支援，但有差異：這類機器的觸控板是鍵盤右側的豎條，數字模式由鍵盤專用鍵切換，而不是右上角的 62 幀長按。可用 <code>numlock</code> 固定模式。",
     "faq.6.q": "需要 root 或重新開機嗎？",
     "faq.6.d": "都不需要。守護行程以 <code>systemd --user</code> 單元執行，udev 把觸控板與背光節點授權給工作階段。首次安裝後登出再登入一次，讓單元與 udev 規則生效。",
